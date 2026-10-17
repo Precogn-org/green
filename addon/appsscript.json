@@ -1,0 +1,23 @@
+{
+  "timeZone": "America/Martinique",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.container.ui"
+  ],
+  "addOns": {
+    "common": {
+      "name": "Structory Green",
+      "logoUrl": "https://structory.ai/logo-structory.png",
+      "layoutProperties": {
+        "primaryColor": "#1c1917",
+        "secondaryColor": "#f59e0b"
+      },
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      }
+    },
+    "sheets": {}
+  }
+}
