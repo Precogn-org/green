@@ -1,6 +1,6 @@
 # Fiche Google Workspace Marketplace — Structory Green
 
-Brouillon. Rien n'est publié. Ouvert : contact de support (absent du dépôt), captures et vidéo,
+Brouillon. Rien n'est publié. Ouvert : captures et vidéo,
 et le texte de la confidentialité et des conditions (pages à créer par site-af).
 
 Ce que fait réellement l'add-on (vérifié dans `addon/Code.js`) : il ajoute un menu et un volet qui
@@ -98,4 +98,4 @@ carbon, CO2, storage, sustainability, environment, calculation, Structory
 
 ## Contact de support
 
-À FOURNIR : aucune adresse de support n'existe dans le dépôt. Ne pas publier sans elle.
+larose75@structory.ai (même adresse que SMC, déjà publiée sur les pages SMC).
