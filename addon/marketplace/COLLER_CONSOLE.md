@@ -1,8 +1,8 @@
 # Textes à coller dans la console — Structory Green (gabarit SMC, COLLER_CONSOLE.md)
 
 Textes exacts pour chaque écran de la console Google. Rien n'est publié.
-Exécuté par V01 / Gimly, pas par larose75 (sauf le clic « Publier » final, après accord de Google).
-Ce fichier donne uniquement les textes à coller ; aucun geste n'est attribué à larose75.
+Exécutant : **à confirmer** (V00 tranche avec larose75). Ce fichier donne uniquement les textes à coller ;
+aucun geste n'est attribué à qui que ce soit.
 
 Statut des champs : **OK** = vérifié dans le code ou sur une URL ; **À CRÉER** = page ou identifiant
 qui n'existe pas encore.
@@ -48,10 +48,10 @@ Texte prêt dans `addon/marketplace/FICHE.md` (FR et EN, catégorie Productivit�
 - Vidéo : `VIDEO_SCENARIO.md`, une minute — **À CRÉER**
 
 ## Écran 6 — Auth > Audience
-Passage en production : après validation des écrans 1 à 5 et de la PR #9 prête. Géré par V01.
+Passage en production : après validation des écrans 1 à 5 et de la PR #9 prête. Exécutant : à confirmer.
 
 ## Prérequis avant de coller
 1. Pages légales en ligne et en 200 (site-af / A13).
-2. Projet Apps Script Green déployé en version figée (ID à donner par V01).
+2. Projet Apps Script Green déployé en version figée (ID à fournir, exécutant à confirmer).
 3. Test réel rejoué dans un classeur neuf (protocole : `TEST_REEL.md`).
 4. Captures et vidéo produites (`VIDEO_SCENARIO.md`).
