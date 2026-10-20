@@ -2,7 +2,7 @@
   "_avertissement": "Cas d'école FICTIF. L'organisation, les chiffres et les noms n'existent pas. Aucune donnée réelle. Mode démo : rien n'est enregistré.",
   "organisation": {
     "orgId": "greendemo",
-    "nom": "Menuiserie Lemaire (fictive)",
+    "nom": "Menuiserie des Alizés SARL (fictive)",
     "description": "PME fictive de 12 salariés, atelier de menuiserie. Elle tient un journal de travaux et de factures et garde ses pièces jointes dans son propre stockage."
   },
   "parametres": {
