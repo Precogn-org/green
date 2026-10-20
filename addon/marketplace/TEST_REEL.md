@@ -20,15 +20,16 @@ Particularités de Green, qui simplifient le test :
 Exécutée par une session avec compte Google de test, ou par larose75. Classeur vierge, aucune
 donnée client.
 
-1. Installer l'add-on en test privé (projet Apps Script lié au dépôt, déploiement de test).
-2. Ouvrir le classeur : le menu « Structory Green » apparaît dans Extensions.
-3. Ouvrir le volet : aucune page de connexion n'apparaît ; la page green-embed s'affiche.
-4. Vérifier le contrôle de provenance : un message posté depuis une autre origine est ignoré
-   (la barre d'état du volet ne change pas).
-5. Réseau coupé : le volet affiche un état d'erreur ou reste vide, sans bloquer Sheets.
-6. Compte non membre : sans objet (aucune donnée de l'organisation).
-7. Logo : l'icône du menu et du volet affiche le logo Green (URL en 200 requise).
-8. Désinstaller le test privé et vérifier qu'aucun onglet n'a été créé dans le classeur.
+| # | Étape | Attendu | Observé |
+|---|---|---|---|
+| 1 | Installer l'add-on en test privé (projet Apps Script lié au dépôt, déploiement de test) | Installation sans erreur | (à remplir) |
+| 2 | Ouvrir le classeur | Menu « Structory Green » dans Extensions | (à remplir) |
+| 3 | Consentement | Un seul droit demandé : afficher le volet (script.container.ui) | (à remplir) |
+| 4 | Ouvrir le volet | Page green-embed affichée, aucune page de connexion | (à remplir) |
+| 5 | Message depuis une autre origine | Ignoré : l'état du volet ne change pas | (à remplir) |
+| 6 | Réseau coupé | État d'erreur ou volet vide, Sheets reste utilisable | (à remplir) |
+| 7 | Logo | Icône du menu et du volet = logo Green (URL en 200) | (à remplir) |
+| 8 | Désinstaller le test | Aucun onglet créé ni modifié dans le classeur | (à remplir) |
 
 Résultats à consigner : date, compte de test, navigateur, résultat de chaque étape, capture.
 
