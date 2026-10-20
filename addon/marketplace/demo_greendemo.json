@@ -1,0 +1,35 @@
+{
+  "_avertissement": "Cas d'école FICTIF. L'organisation, les chiffres et les noms n'existent pas. Aucune donnée réelle. Mode démo : rien n'est enregistré.",
+  "organisation": {
+    "orgId": "greendemo",
+    "nom": "Menuiserie des Alizés SARL (fictive)",
+    "description": "PME fictive de 12 salariés, atelier de menuiserie. Elle tient un journal de travaux et de factures et garde ses pièces jointes dans son propre stockage."
+  },
+  "parametres": {
+    "journal_annuel_go": 50,
+    "replication_saas": 2,
+    "environnements_saas": 2,
+    "copies_byos": 2,
+    "zone": "France",
+    "ci_kgco2e_par_kwh": 0.0461,
+    "pue": 1.56
+  },
+  "resultat_attendu_page": {
+    "copies_saas": 6,
+    "copies_byos": 2,
+    "co2_saas_g": 226.8,
+    "co2_byos_g": 75.6,
+    "co2_evite_g_par_an": 151.2
+  },
+  "etiquettes": {
+    "journal_annuel_go": "HYPOTHESE",
+    "replication_saas": "SOURCE (CCF, RDS multi-AZ = 2)",
+    "environnements_saas": "HYPOTHESE",
+    "copies_byos": "HYPOTHESE (proxy)",
+    "zone": "SOURCE (ADEME, France)",
+    "ci_kgco2e_par_kwh": "SOURCE (ADEME, Base Empreinte, 0,0461)",
+    "pue": "SOURCE (Uptime Institute 2024, moyenne du secteur)",
+    "resultat_attendu_page": "EXTRAPOLE (calcul sur les hypothèses ci-dessus)"
+  },
+  "formule": "CO2 (kg) = To x copies x 1,2 x 8760 / 1000 x PUE x CI ; To = journal_annuel_go / 1000"
+}
