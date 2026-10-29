@@ -1,0 +1,89 @@
+# Profil d'exemple — organisation fictive (petite association / copropriété).
+#
+# Chaque paramètre est :
+#   - un nombre            → HYPOTHESE (affichée comme telle dans le rapport) ;
+#   - un identifiant texte → facteur sourcé de factors/factors.yaml ;
+#   - un triplet {bas, central, haut} de l'un ou l'autre.
+# Convention : `bas` = valeur qui donne le MOINS d'émissions évitées (scénario prudent).
+# Toutes les valeurs numériques ci-dessous sont des hypothèses d'illustration, pas des mesures.
+
+organisation: "Organisation exemple (fictive)"
+
+unite_fonctionnelle:
+  entries_per_month: 2000          # écritures comptables par mois
+  bytes_per_entry: 1500            # octets par écriture dans le journal (ligne + métadonnées)
+  history_years: 3                 # années d'historique conservées
+  attachments_gb: 5                # pièces jointes déjà présentes dans le stockage de l'organisation
+  attachments_new_gb_per_year: 1.5 # pièces jointes ajoutées dans l'année
+
+saas:
+  grid: grid_intensity_ie          # région cloud UE fréquente (Irlande)
+  pue: { bas: pue_aws, central: pue_aws, haut: pue_industry_avg }
+  media: ssd
+  derived_overhead: { bas: 0.5, central: 1.0, haut: 2.0 }   # tables dérivées + index, en fraction du journal
+  replication_db: { bas: replication_aws_rds_multi_az, central: replication_aws_rds_multi_az, haut: replication_aws_rds_aurora }
+  replication_backup: replication_aws_rds_backup
+  replication_objects: replication_aws_s3
+  backup_copies: { bas: 1, central: 2, haut: 7 }            # copies complètes équivalentes en sauvegarde
+  non_prod_env_copies: { bas: 0, central: 1, haut: 2 }      # environnements hors prod avec copie des données
+  org_share: { bas: 0.001, central: 0.005, haut: 0.02 }     # part des serveurs attribuée à l'organisation
+  storage_lifetime_years: { bas: 6, central: 5, haut: 4 }
+  environments:
+    - name: production
+      vcpu: 8
+      memory_gb: 32
+      utilization: 0.2
+    - name: preproduction
+      vcpu: 4
+      memory_gb: 16
+      utilization: 0.05
+
+byos:
+  preexisting_storage: true        # l'organisation a déjà son Google Drive (obligatoire en V0.1)
+  grid: grid_intensity_eu27        # localisation réelle du stockage Google non connue : moyenne UE
+  pue: pue_google
+  media: ssd
+  # replication_google_drive est A_SOURCER : approximation validée = facteur CCF Google Cloud Storage.
+  replication: { bas: replication_aws_s3, central: replication_gcp_cloud_storage, haut: replication_gcp_cloud_storage }
+  storage_lifetime_years: { bas: 4, central: 5, haut: 6 }
+  vcpu_hours_per_year: { bas: 50, central: 10, haut: 2 }    # recalculs à la demande (Apps Script, web, mobile)
+  memory_gb_per_vcpu: 2
+  utilization: 0.5
+
+# ---------------------------------------------------------------- échelle (coût + carbone, N organisations)
+# Voir docs/MODELE_COUT_CARBONE.md. Les identifiants `ovh_*` renvoient à factors/prices.yaml.
+echelle:
+  tailles: [1, 1000, 10000, 100000]
+  saas:
+    prix_instances: [ovh_b3_32_hour, ovh_b3_16_hour]   # un prix par saas.environments (8 vCPU/32 Go, 4 vCPU/16 Go)
+    load_balancers: 1
+    prix_load_balancer: ovh_load_balancer_s_month
+    utilisation_capacite_ajoutee: 0.2                  # même taux que la production
+    memoire_par_vcpu_gb: 4                             # ratio des instances b3 (catalogue OVH)
+    egress_gb_par_org: { bas: 1, central: 5, haut: 20 }
+    prix_egress: ovh_egress_instance
+    exploitation_eur_an: null                          # prix À SOURCER : non chiffré
+  byos:
+    # Socle = VPS de production PreCogn (mesure interne 08/10/2026, lecture seule) :
+    # OVH, 7 751 Mo de RAM sans swap ; API analyzor 4 workers ~0,8 Go ; modèle IA local
+    # qwen2.5-coder:3b 2 092 Mo chargé à la demande ; le reste sert aux sessions de
+    # développement et est exclu. Pas de mesure CPU / réseau / disque par organisation.
+    prix_vps: ovh_vps1_2026_month                      # VPS-1 2026, 4 vCore, 8 Go
+    vps_vcpu: 4
+    vps_ram_gb: 7.751                                  # mesure interne 08/10/2026
+    ram_production_gb: { bas: 7.751, central: 2.892, haut: 0.8 }   # VPS entier / API + IA / API seule
+    utilisation_max: 0.5                               # charge CPU cible avant d'ajouter un VPS (HYPOTHESE)
+    grid: { bas: grid_intensity_eu27, central: grid_intensity_fr, haut: grid_intensity_fr }  # VPS supposé en France
+    pue: pue_ovh
+    exploitation_eur_an: null                          # prix À SOURCER : non chiffré
+  organisation:
+    stockage_existant_suffisant: true                  # le journal tient dans le quota existant : 0 € marginal
+
+sensibilite:
+  org_share: [0.0001, 0.001, 0.005, 0.02, 0.1, 1.0]
+
+notes:
+  - "Réplication BYOS : Google ne publie pas le facteur de Drive ; le central utilise le facteur CCF de Google Cloud Storage (2) comme approximation, le bas le facteur S3 (6) par prudence."
+  - "org_share central 0,005 = une plateforme SaaS dont l'infrastructure ci-dessus sert environ 200 organisations."
+  - "Échelle : vCPU SaaS permanents par organisation = org_share × vCPU du socle (12) ; heures vCPU BYOS par organisation = byos.vcpu_hours_per_year, servies par le VPS socle."
+  - "Valeurs numériques d'illustration : à remplacer par les données réelles de l'organisation."
