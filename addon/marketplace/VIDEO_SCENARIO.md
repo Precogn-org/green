@@ -1,4 +1,4 @@
-# Vidéo de démonstration — Structory Green pour Sheets — scénario seconde par seconde
+# Vidéo de démonstration — Green pour Sheets — scénario seconde par seconde
 
 Gabarit de SMC (VIDEO_SCENARIO.md), adapté à Green. Durée cible : 1 min. Langue : anglais
 (voix ou sous-titres EN). Publication YouTube en mode « Non répertoriée » (Unlisted), jamais publique
@@ -13,10 +13,10 @@ Particularités de Green :
 
 | Temps | Écran | Voix / texte à l'écran |
 |---|---|---|
-| 0:00-0:08 | Titre « Structory Green for Sheets » | « This video shows the add-on and the one permission it asks for. » |
+| 0:00-0:08 | Titre « Green for Sheets » | « This video shows the add-on and the one permission it asks for. » |
 | 0:08-0:18 | Classeur vierge, menu Extensions > Add-ons | Le classeur est vide, aucune donnée. |
 | 0:18-0:35 | Installation puis écran de consentement complet, zoom sur la liste des droits, ID client OAuth visible dans l'adresse | « The only permission: display the side panel (script.container.ui). » |
-| 0:35-0:45 | Menu Extensions > Structory Green > Open Structory Green | « The add-on opens the Structory Green module in a side panel. » |
+| 0:35-0:45 | Menu Extensions > Green > Open Green | « The add-on opens the Green module in a side panel. » |
 | 0:45-0:55 | Volet ouvert, page du module | « Nothing is read from or written to the spreadsheet, and no data is sent to a server. » |
 | 0:55-1:00 | Fermeture du volet, retour au classeur inchangé | « Uninstall at any time from Extensions. » |
 

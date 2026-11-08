@@ -1,10 +1,10 @@
-# Fiche Google Workspace Marketplace — Structory Green
+# Fiche Google Workspace Marketplace — Green
 
 Brouillon. Rien n'est publié. Ouvert : captures et vidéo,
 et le texte de la confidentialité et des conditions (pages à créer par site-af).
 
 Ce que fait réellement l'add-on (vérifié dans `addon/Code.js`) : il ajoute un menu et un volet qui
-affiche la page du module Structory Green. Il ne lit ni n'écrit aucune cellule, n'appelle aucun
+affiche la page du module Green. Il ne lit ni n'écrit aucune cellule, n'appelle aucun
 serveur et ne garde rien dans le compte Google. Le seul droit demandé est l'affichage du volet.
 
 ---
@@ -12,18 +12,18 @@ serveur et ne garde rien dans le compte Google. Le seul droit demandé est l'aff
 ## FRANÇAIS
 
 ### Nom
-Structory Green
+Green
 
 ### Description courte
-Ouvrez le module Structory Green dans un volet de Google Sheets : calcul du CO2 évité par un stockage que vous gardez chez vous.
+Ouvrez le module Green dans un volet de Google Sheets : calcul du CO2 évité par un stockage que vous gardez chez vous.
 
 ### Description détaillée
 
-Structory Green affiche, dans un volet à droite de votre classeur, la page du module Structory Green.
+Green affiche, dans un volet à droite de votre classeur, la page du module Green.
 
 CE QUE FAIT L'ADDON
 
-Vous ouvrez le menu Extensions > Structory Green > Ouvrir Structory Green. Un volet s'affiche avec la page du module : présentation, calculateur et limites de la méthode.
+Vous ouvrez le menu Extensions > Green > Ouvrir Green. Un volet s'affiche avec la page du module : présentation, calculateur et limites de la méthode.
 
 LECTURE SEULE
 
@@ -39,7 +39,7 @@ L'addon ne contient aucune publicité.
 
 IMPORTANT
 
-Structory Green est une estimation d'ordres de grandeur, pas une mesure. La méthode n'a pas été revue par un tiers.
+Green est une estimation d'ordres de grandeur, pas une mesure. La méthode n'a pas été revue par un tiers.
 
 ### Catégorie
 Productivité
@@ -52,18 +52,18 @@ carbone, CO2, stockage, durabilité, environnement, calcul, Structory
 ## ENGLISH
 
 ### Name
-Structory Green
+Green
 
 ### Short description
-Open the Structory Green module in a Google Sheets side panel: estimate the CO2 avoided by keeping your own storage.
+Open the Green module in a Google Sheets side panel: estimate the CO2 avoided by keeping your own storage.
 
 ### Detailed description
 
-Structory Green shows the Structory Green module in a side panel of your spreadsheet.
+Green shows the Green module in a side panel of your spreadsheet.
 
 WHAT THE ADD-ON DOES
 
-Open Extensions > Structory Green > Open Structory Green. A panel shows the module page: overview, calculator and limits of the method.
+Open Extensions > Green > Open Green. A panel shows the module page: overview, calculator and limits of the method.
 
 READ-ONLY
 
@@ -79,7 +79,7 @@ The add-on contains no advertising.
 
 IMPORTANT
 
-Structory Green gives orders of magnitude, not measurements. The method has not been reviewed by a third party.
+Green gives orders of magnitude, not measurements. The method has not been reviewed by a third party.
 
 ### Category
 Productivity
@@ -91,7 +91,7 @@ carbon, CO2, storage, sustainability, environment, calculation, Structory
 
 ## Captures prévues (à produire, non faites)
 
-1. menu Extensions avec « Structory Green » ;
+1. menu Extensions avec « Green » ;
 2. volet ouvert, page du module ;
 3. volet en réseau coupé (état d'erreur) ;
 4. logo dans le menu.

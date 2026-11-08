@@ -1,8 +1,8 @@
 // ================================================================
-// Structory Green — add-on Google Sheets.
+// Green — add-on Google Sheets.
 //
 // Rôle :
-//   1. ajouter le menu « Structory Green » dans le classeur ;
+//   1. ajouter le menu « Green » dans le classeur ;
 //   2. ouvrir un volet qui affiche https://structory.ai/green-embed/ ;
 //   3. à la demande de la page, ouvrir le Communicator de l'espace choisi, avec un billet
 //      à usage unique obtenu côté serveur (jamais le jeton de session dans une URL).
@@ -25,7 +25,7 @@ const COMMUNICATOR_URL = ''; // À CONFIRMER (D1) : Communicator partagé
 // Appelé à l'ouverture du classeur : crée le menu de l'add-on.
 function onOpen(e) {
   SpreadsheetApp.getUi().createAddonMenu()
-    .addItem('Ouvrir Structory Green', 'ouvrirPanneau')
+    .addItem('Ouvrir Green', 'ouvrirPanneau')
     .addToUi();
 }
 
@@ -35,7 +35,7 @@ function onInstall(e) {
 }
 
 function ouvrirPanneau() {
-  const html = HtmlService.createHtmlOutput(panneauHtml_()).setTitle('Structory Green');
+  const html = HtmlService.createHtmlOutput(panneauHtml_()).setTitle('Green');
   SpreadsheetApp.getUi().showSidebar(html);
 }
 
@@ -43,9 +43,9 @@ function ouvrirPanneau() {
 function onHomepage(e) {
   const section = CardService.newCardSection()
     .addWidget(CardService.newTextParagraph()
-      .setText('Ouvrez le volet Structory Green depuis le menu Extensions.'));
+      .setText('Ouvrez le volet Green depuis le menu Extensions.'));
   return CardService.newCardBuilder()
-    .setHeader(CardService.newCardHeader().setTitle('Structory Green'))
+    .setHeader(CardService.newCardHeader().setTitle('Green'))
     .addSection(section)
     .build();
 }
@@ -112,9 +112,9 @@ function panneauHtml_() {
   ].join('\n');
   const consts = 'var ORIGINE=' + JSON.stringify(ORIGINE) + ',MSG_AUTH=' + JSON.stringify('Connexion au module requise.') + ';';
   return '<!DOCTYPE html><html><head><base target="_top"><style>' + css + '</style></head><body>' +
-    '<div id="top"><div id="marque">Structory Green</div></div>' +
+    '<div id="top"><div id="marque">Green</div></div>' +
     '<p id="msg"></p>' +
-    '<iframe id="green" src="' + GREEN_URL + '" title="Structory Green"></iframe>' +
+    '<iframe id="green" src="' + GREEN_URL + '" title="Green"></iframe>' +
     '<iframe id="cadre" title="Communicator"></iframe>' +
     '<script>' + consts + '\n' + js + '</script></body></html>';
 }

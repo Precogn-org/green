@@ -1,11 +1,11 @@
-# Pas-à-pas console — Structory Green (gestes uniques, un par un)
+# Pas-à-pas console — Green (gestes uniques, un par un)
 
 Document de travail. Rien n'est lancé. Exécutant à confirmer (V00 tranche avec larose75).
 Calqué sur `PUBLICATION_ADDON_SHEETS.md` §4 et sur les leçons de SMC (ETAPES_CONSOLE.md, refus du
 Branding le 19/10). Une étape = un geste. Ne passer à la suivante qu'après la capture attendue.
 
 Valeurs à utiliser (vérifiées dans le dépôt ou par curl, le 2026-10-20) :
-- Nom : `Structory Green`
+- Nom : `Green`
 - Domaine : `structory.ai`
 - Accueil : `https://structory.ai/green/addon/` — EN LIGNE, 200 vérifié le 2026-10-20 (H1 « Structory Green »)
 - Confidentialité : `https://structory.ai/green/confidentialite` — EN LIGNE, 200 (H1 « Structory Green — Politique de confidentialité »)
@@ -21,8 +21,8 @@ Valeurs à utiliser (vérifiées dans le dépôt ou par curl, le 2026-10-20) :
 
 ## Étape 1 — Créer le projet Google Cloud dédié
 Lien : https://console.cloud.google.com/projectcreate
-Taper le nom `Structory Green` puis cliquer **Créer**.
-Attendu : le sélecteur de projet affiche `Structory Green`. Capture du sélecteur.
+Taper le nom `Green` puis cliquer **Créer**.
+Attendu : le sélecteur de projet affiche `Green`. Capture du sélecteur.
 
 ## Étape 2 — Lier le projet Apps Script à ce projet Cloud
 Lien : `https://script.google.com/home/projects/1C-ozge0nM1VUwi6tf9xy6cifN-i-QATIF9jW1ON2CfrO7hon3o7ckC7X/settings` (projet Apps Script Green, menu **Paramètres du projet**). Format du lien à confirmer à l'écran.

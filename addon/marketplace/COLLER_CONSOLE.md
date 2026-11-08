@@ -1,4 +1,4 @@
-# Textes à coller dans la console — Structory Green (gabarit SMC, COLLER_CONSOLE.md)
+# Textes à coller dans la console — Green (gabarit SMC, COLLER_CONSOLE.md)
 
 Textes exacts pour chaque écran de la console Google. Rien n'est publié.
 Exécutant : **à confirmer** (V00 tranche avec larose75). Ce fichier donne uniquement les textes à coller ;
@@ -8,7 +8,7 @@ Statut des champs : **OK** = vérifié dans le code ou sur une URL ; **À CRÉER
 qui n'existe pas encore.
 
 ## Écran 1 — Auth > Image de marque (branding)
-- Nom de l'application : `Structory Green` — OK
+- Nom de l'application : `Green` — OK
 - Logo : fichier `logo-green-128.png` (128×128, fond transparent). Source : `~/claude-rc/sessions/green/logos/logo-green-128.png`, déjà en ligne sur `https://structory.ai/logo-green-128.png` (200) — OK
 - Page d'accueil : `https://structory.ai/green/addon/` — À CRÉER (site-af / A13)
 - Politique de confidentialité : `https://structory.ai/green/confidentialite` — À CRÉER (A13)
@@ -24,10 +24,10 @@ https://www.googleapis.com/auth/script.container.ui
 Portée **sensible** (triangle rouge sur la console, confirmé par V00 le 20/10). Il faut donc la justifier.
 
 Justification de `script.container.ui` (EN, à coller telle quelle) :
-display the add-on's side panel next to the spreadsheet (Extensions > Structory Green menu); no other dialog.
+display the add-on's side panel next to the spreadsheet (Extensions > Green menu); no other dialog.
 
 Justification de `script.container.ui` (FR, pour la page de confidentialité) :
-afficher le volet de l'add-on à droite du classeur (menu Extensions > Structory Green) ; aucune autre boîte de dialogue.
+afficher le volet de l'add-on à droite du classeur (menu Extensions > Green) ; aucune autre boîte de dialogue.
 
 Aucune autre portée : pas de `spreadsheets`, pas de `script.external_request`, pas de `userinfo.email`. Le manifeste ne contient que `script.container.ui` (`addon/appsscript.json`).
 
@@ -42,7 +42,7 @@ Activer `Google Workspace Marketplace SDK` — À CRÉER (même opération que S
 
 ## Écran 5 — Marketplace SDK > Fiche du Store
 Texte prêt dans `addon/marketplace/FICHE.md` (FR et EN, catégorie Productivité).
-- Nom FR et EN : `Structory Green`
+- Nom FR et EN : `Green`
 - Description courte FR (128 car.) et EN (116 car.) : voir FICHE.md
 - Captures : 4 écrans prévus (voir FICHE.md) — **À CRÉER**
 - Vidéo : `VIDEO_SCENARIO.md`, une minute — **À CRÉER**
