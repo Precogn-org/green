@@ -12,7 +12,7 @@
 // message que s'il vient de https://structory.ai ET de la fenêtre de ce cadre.
 // Pas de backtick, d'antislash ni de ${ dans le HTML (piège Apps Script).
 //
-// À CONFIRMER (décisions D1 et D2, issue #10) : route serveur et URL du Communicator partagé.
+// Route serveur (D1) et règle d'appartenance (D2) confirmées ; démo greendemo sans billet (D3).
 // Tant qu'elles ne sont pas confirmées, COMMUNICATOR_URL reste vide et le billet n'est pas demandé.
 // ================================================================
 
@@ -20,7 +20,9 @@ const GREEN_URL = 'https://structory.ai/green-embed/';
 const ORIGINE = 'https://structory.ai';
 const API_URL = 'https://api.precogn.org';
 const TICKET_PATH = '/api/sheet/embed-ticket'; // À CONFIRMER (D1)
-const COMMUNICATOR_URL = ''; // À CONFIRMER (D1) : Communicator partagé
+// Adresse du Communicator : lue dans les propriétés du script (Paramètres du projet Apps Script), jamais dans le code.
+const COMMUNICATOR_URL = PropertiesService.getScriptProperties().getProperty('COMMUNICATOR_URL') || '';
+const DEMO_ORG_ID = 'greendemo'; // démo publique : lecture seule, données fictives, sans billet
 
 // Appelé à l'ouverture du classeur : crée le menu de l'add-on.
 function onOpen(e) {
@@ -57,6 +59,9 @@ function onHomepage(e) {
 function communicatorUrlFor(orgId) {
   try {
     if (!COMMUNICATOR_URL) return { success: false, message: 'Communicator non configuré.' };
+    if (String(orgId) === DEMO_ORG_ID) {
+      return { success: true, url: COMMUNICATOR_URL + '?orgId=' + DEMO_ORG_ID + '&embed=1' };
+    }
     const ticket = getTicket_(String(orgId));
     return { success: true, url: COMMUNICATOR_URL + '?orgId=' + encodeURIComponent(String(orgId))
       + '&embed=1&ticket=' + encodeURIComponent(ticket) };
