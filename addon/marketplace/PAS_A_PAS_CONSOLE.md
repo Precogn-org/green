@@ -13,9 +13,9 @@ Valeurs à utiliser (vérifiées dans le dépôt ou par curl, le 2026-10-20) :
 - Contact : `larose75@structory.ai`
 - Logo : fichier `logo-green-128.png` (128×128). Source sur le VPS : `~/claude-rc/sessions/green/logos/logo-green-128.png`. À télécharger sur le PC avant l'upload (la console demande un fichier, pas une URL).
 - Portée unique : `https://www.googleapis.com/auth/script.container.ui` (sensible).
-- Script ID Apps Script Green : `1C-ozge0nM1VUwi6tf9xy6cifN-i-QATIF9jW1ON2CfrO7hon3o7ckC7X` (donné par V01)
+- Script ID Apps Script Green : voir les paramètres du projet Apps Script (identifiant donné par V01, jamais recopié ici)
 - Version : 2
-- Déploiement de test : `AKfycbxAzP9y3Mrk4QMRvWGLGZcxmwQdxhxcqAxmJkMGHZ_x8KRfdmf-Tf3FpeDtwW0NR0sjxA` (@2, test uniquement, donné par V01)
+- Déploiement de test : version 2, identifiant du déploiement de test voir le tableau de bord de déploiement (donné par V01, jamais recopié ici)
 - Déploiement de production (Marketplace) : **à donner par V01** ; ne pas utiliser le déploiement de test pour la publication.
 - ID du projet Google Cloud Green : **à créer à l'étape 1**, à noter.
 
@@ -25,7 +25,7 @@ Taper le nom `Green` puis cliquer **Créer**.
 Attendu : le sélecteur de projet affiche `Green`. Capture du sélecteur.
 
 ## Étape 2 — Lier le projet Apps Script à ce projet Cloud
-Lien : `https://script.google.com/home/projects/1C-ozge0nM1VUwi6tf9xy6cifN-i-QATIF9jW1ON2CfrO7hon3o7ckC7X/settings` (projet Apps Script Green, menu **Paramètres du projet**). Format du lien à confirmer à l'écran.
+Lien : le projet Apps Script Green, menu **Paramètres du projet** (ouvrir le projet depuis le tableau de bord Apps Script). Format du lien à confirmer à l'écran.
 Cliquer **Modifier le projet Google Cloud** et coller le numéro du projet créé à l'étape 1.
 Attendu : le numéro de projet est affiché sous « Projet Google Cloud standard ». Capture.
 
@@ -73,7 +73,7 @@ Régler : visibilité **Publique**, installation **individuelle**, intégration 
 Attendu : bandeau « Brouillon enregistré ». Capture.
 
 ## Étape 12 — Test réel dans un classeur neuf (avant toute vidéo)
-Ouvrir un classeur Google Sheets vierge avec un compte de test (pas celui du propriétaire du projet), puis installer le déploiement de test @2 (`AKfycbxAzP9y3Mrk4QMRvWGLGZcxmwQdxhxcqAxmJkMGHZ_x8KRfdmf-Tf3FpeDtwW0NR0sjxA`).
+Ouvrir un classeur Google Sheets vierge avec un compte de test (pas celui du propriétaire du projet), puis installer le déploiement de test (version 2, voir le tableau de bord de déploiement).
 Suivre `TEST_REEL.md`, étapes 1 à 8, et consigner « attendu / observé ».
 Attendu : les 8 lignes remplies. Captures des étapes 2, 4 et 7.
 
