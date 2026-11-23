@@ -1,4 +1,4 @@
-# Test réel et plan captures/vidéo — Structory Green pour Sheets
+# Test réel et plan captures/vidéo — Green pour Sheets
 
 Gabarit de SMC (suivre_mes_comptes, PR #29, commit 9584abb), adapté à Green.
 Brouillon : rien n'est présenté à larose75 avant le test réel.
@@ -11,7 +11,7 @@ Particularités de Green, qui simplifient le test :
 
 ## Texte « En clair » pour la PR (sans jargon)
 
-> Structory Green s'ouvre dans Google Sheets (menu Extensions > Structory Green). Un volet à
+> Green s'ouvre dans Google Sheets (menu Extensions > Green). Un volet à
 > droite présente le module et son calculateur de CO2 évité. Le classeur n'est pas modifié et
 > aucune donnée n'est lue. Rien n'est publié tant que larose75 n'a pas cliqué.
 
@@ -23,7 +23,7 @@ donnée client.
 | # | Étape | Attendu | Observé |
 |---|---|---|---|
 | 1 | Installer l'add-on en test privé (projet Apps Script lié au dépôt, déploiement de test) | Installation sans erreur | (à remplir) |
-| 2 | Ouvrir le classeur | Menu « Structory Green » dans Extensions | (à remplir) |
+| 2 | Ouvrir le classeur | Menu « Green » dans Extensions | (à remplir) |
 | 3 | Consentement | Un seul droit demandé : afficher le volet (script.container.ui) | (à remplir) |
 | 4 | Ouvrir le volet | Page green-embed affichée, aucune page de connexion | (à remplir) |
 | 5 | Message depuis une autre origine | Ignoré : l'état du volet ne change pas | (à remplir) |
@@ -36,7 +36,7 @@ Résultats à consigner : date, compte de test, navigateur, résultat de chaque 
 ## Captures et vidéo (pour la fiche de publication)
 
 Format : 1280×800, PNG, zoom 100 %. Quatre écrans, pas plus :
-1. menu Extensions avec « Structory Green » ;
+1. menu Extensions avec « Green » ;
 2. volet ouvert, page d'accueil du module ;
 3. volet en réseau coupé (état d'erreur) ;
 4. logo dans le menu.
